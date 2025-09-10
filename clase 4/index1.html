@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        .contenedor{
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 20px;
+        }
+        .contenido{
+            background-color: brown;
+            border-radius: 10px;
+        }
+        #primero{
+            grid-column: 1/3;
+        }
+        #ultimo{
+            grid-column: 2/4;
+            grid-row: 2/4;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="contenido" id="primero"></div>
+        <div class="contenido"></div>
+        <div class="contenido"></div>
+        <div class="contenido"></div>
+        <div class="contenido" id="ultimo"></div>
+    </div>
+    
+</body>
+</html>
