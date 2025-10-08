@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<button id="boton">press</button>
+    <input id="numero" type="number">
+    <p id="output"></p>
+
+    <script>
+        document.getElementById('boton').addEventListener('click',comparacion)
+        function comparacion(){
+            const val = document.getElementById('numero').value 
+           let mensaje
+            if(val>=18){
+                mensaje='mayor'
+        }
+        else{
+            mensaje='menor'
+        }
+            document.getElementById('output').innerHTML = mensaje
+        }
+        
+    </script>
+</body>
+</html>
