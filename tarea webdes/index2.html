@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<button id="boton">waou</button>
+    <input id="message" value="escribe una palabra">
+    <p id="output" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 40px; color: #32c8c8;"></p>
+
+    <script>
+        document.getElementById('boton').addEventListener('click',mensaje)
+        function mensaje(){
+            const val = document.getElementById('message').value
+            document.getElementById('output').innerHTML = val
+        }
+    </script>
+</body>
+</html>
