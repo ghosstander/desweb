@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .contenedor{
+            height: calc(100vh - 20px);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr ;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+    <div class="contenido"></div>
+    <div class="contenido"></div>
+    <div class="contenido"></div>
+    <div class="contenido"></div>
+    <div class="contenido"></div>
+    <div class="contenido"></div>
+    <div class="contenido"></div>
+    <div class="contenido"></div>
+    <div class="contenido"></div>
+    </div>
+    <script>
+        let estela = []
+        document.body.addEventListener('mousemove', (e) => {
+            const mus = document.getElementsByClassName('contenido')
+            estela.push([e.clientX, e.clientY])
+            if(estela.length > mus.length) estela.shift()
+            for(let i = 0; i < mus.length; i++){
+        mus[i].style.top = estela [i][i]+ 'px'
+        mus[i].style.left = estela[i][0] + 'px'
+        }
+        })
+    </script>
+</body>
+</html>
