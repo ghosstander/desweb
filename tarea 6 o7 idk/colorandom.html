@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #objeto{
+            width: 80px;
+            height: 50px;
+            background-color: #43b3b3;
+            border-radius: 10px;
+            position: absolute;
+            transform: translate(-50%,-50%)
+        }
+    </style>
+</head>
+<body>
+    <div id="objeto"></div>
+    <script>
+    let movimiento = false
+        const objeto= document.getElementById('objeto')
+        objeto.addEventListener('mousedown', colorandom)
+        function colorandom() {
+    let symbols = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) 
+    {color += symbols[Math.floor(Math.random() * 16)];} 
+    objeto.style.background = color}
+        
+    </script>
+</body>
+</html>
